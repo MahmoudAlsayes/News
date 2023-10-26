@@ -1,6 +1,14 @@
 {
   "News" : "news",
   "language" : "language",
-  "setting": "setting"
+  "Technology": "Technology",
+  "Setting": "Setting",
+
+  "Science": "Science",
+  "Health": "Health",
+  "General": "General",
+  "Entertainment": "Entertainment",
+  "Business": "Business",
+  "Sports": "Sports"
 
 }

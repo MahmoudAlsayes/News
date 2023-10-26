@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class ModelBottomSheet extends StatelessWidget {
@@ -11,11 +12,18 @@ class ModelBottomSheet extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Arabic",style: TextStyle(fontSize: 25),),
+            InkWell(
+              onTap: () {
+                context.setLocale(Locale('ar'));
+              },
+                child: Text("Arabic",style: TextStyle(fontSize: 25),)),
             SizedBox(
               height: 15,
             ),
-            Text("Engilsh",style: TextStyle(fontSize: 25),),
+            InkWell(
+                onTap: () {
+                  context.setLocale(Locale('en'));
+                },child: Text("Engilsh",style: TextStyle(fontSize: 25),)),
           ],
         ),
       ),

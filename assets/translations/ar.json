@@ -1,6 +1,13 @@
 {
   "News" : "الاخبار",
   "language" : "الاعدادات",
-  "setting": "الاعدادات"
+  "Technology": "تكنولوجيا",
+  "Setting": "الاعدادات",
+  "Science": "علوم",
+  "Health": "صحة",
+  "General": "عام",
+  "Entertainment": "ترفيه",
+  "Business": "اقتصاد",
+  "Sports": "رياضة"
 
 }

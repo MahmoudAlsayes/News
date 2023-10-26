@@ -32,14 +32,14 @@ class _SplashScreenState extends State<SplashScreen> {
               borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20))),
-          title:  Text("News"),
+          title:  Text("News").tr(),
         ),
         body:Padding(
           padding: const EdgeInsets.all(25.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("language",style: TextStyle(
+              Text( "language",style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold
               ) ,).tr(),
