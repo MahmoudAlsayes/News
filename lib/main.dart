@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:news/layout/home_layout.dart';
+import 'package:news/screens/splash_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'package:easy_localization/easy_localization.dart';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
+  runApp(
+    EasyLocalization(
+        supportedLocales: [Locale('en'), Locale('ar')],
+        path: 'assets/translations', // <-- change the path of the translation files
+        fallbackLocale: Locale('ar'),
+        child: MyApp()
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,13 +24,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-     debugShowCheckedModeBanner:  false,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: Locale("en"),
+      debugShowCheckedModeBanner: false,
       initialRoute: HomeLayout.RouteName,
       routes: {
-       HomeLayout.RouteName:(context) => HomeLayout()
-
+        HomeLayout.RouteName: (context) => HomeLayout(),
+        SplashScreen.RouteName: (context) => SplashScreen()
       },
     );
   }
 }
-

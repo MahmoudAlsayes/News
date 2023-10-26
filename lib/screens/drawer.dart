@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news/screens/splash_screen.dart';
 
 class DrawerTab extends StatelessWidget {
   Function onClick ;
@@ -34,7 +35,8 @@ class DrawerTab extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                onClick(SET_ID);
+                // onClick(SET_ID);
+                Navigator.pushNamed(context, SplashScreen.RouteName);
 
 
               },

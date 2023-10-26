@@ -6,9 +6,11 @@ import '../models/SourcesResponse.dart';
 import 'news_card_item.dart';
 
 class TabControlerWedgit extends StatefulWidget {
+  String search ;
   List<Sources> sourse;
 
-  TabControlerWedgit(this.sourse);
+
+  TabControlerWedgit(this.sourse,this.search);
 
   @override
   State<TabControlerWedgit> createState() => _TabControlerWedgitState(sourse);
@@ -40,7 +42,7 @@ class _TabControlerWedgitState extends State<TabControlerWedgit> {
           ),
         ),
         FutureBuilder(
-          future: ApiManager.getNews(sourse[selectedIndex].id ?? ""),
+          future: ApiManager.getNews(sourse[selectedIndex].id ?? "",q: widget.search),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Center(child: CircularProgressIndicator());

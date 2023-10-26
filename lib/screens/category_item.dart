@@ -17,7 +17,7 @@ class CategortItem extends StatelessWidget {
 
         decoration: BoxDecoration(
           color: categoryModel.color,
-          borderRadius: BorderRadius.only(topRight: Radius.circular(18) ,topLeft: Radius.circular(18))
+          borderRadius: BorderRadius.circular(18)
         ),
       child: Column(
         children: [

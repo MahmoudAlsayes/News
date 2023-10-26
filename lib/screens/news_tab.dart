@@ -5,8 +5,9 @@ import '../shared/network/remote/api_manager.dart';
 
 class NewsTab extends StatelessWidget {
 String catId ;
+String search ;
 
-NewsTab(this.catId);
+NewsTab(this.catId,this.search);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ NewsTab(this.catId);
           return Center(child: Text("Somethig went wrong"));
         }
         var sources = snapshot.data?.sources ?? [];
-        return TabControlerWedgit(sources) ;
+        return TabControlerWedgit(sources,search) ;
       },
     );
   }

@@ -1,2 +1,2 @@
 String BASE_URL ="newsapi.org";
-String API_KEY = "8c8acd27a2a243d887454e21243e8e39";
+String API_KEY = "81e4a55a4d124a8d8cc3eb16e16f6fa7";
